@@ -5,14 +5,20 @@ function minCostOfRopes(event){
 	let arr = inputelement.split(',');
 	arr.sort(function(a,b) {return a-b});
 	let cost = 0;
-	while(arr.length>1){
-		var res = Number(arr[0]) + Number(arr[1]);
-		arr.push(res);
+	//2,4
+	//2 4
+	console.log(arr)
+	// document.getElementById("result").textContent = arr.length
+	let x = arr;
+	while(x.length>1){
+		var res = Number(x[0]) + Number(x[1]);
+		x.push(res);
+		//2 4 6
 		cost += res;
-		arr.shift();
-		arr.shift();
+		x.shift();
+		x.shift();
 
-		arr.sort(function (a,b) {reurn a-b});
+		x.sort();
 		
 	}
 	document.getElementById("result").textContent = cost;
