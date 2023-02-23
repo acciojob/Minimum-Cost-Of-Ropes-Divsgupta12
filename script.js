@@ -1,5 +1,6 @@
 //your code here
 function minCostOfRopes(event){
+	event.preventDefault();
 	let inputelement = document.querySelector("input").value;
 	let arr = inputelement.split(',');
 	arr.sort(function(a,b) {return a-b});
